@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body { background-color: #b3e6ff; font-family: Arial, sans-serif; }
+        table { margin: auto; background: #e6f7ff; padding: 20px; border-radius: 10px; }
+        input, select, textarea { margin: 5px; }
+        .btn { padding: 6px 12px; margin: 10px; }
+        fieldset { border: 1px solid #999; padding: 10px; margin-top: 10px; }
+        legend { font-weight: bold; }
+    </style>
+</head>
+<body>
+<h2 align="center">Student Registration Form</h2>
+
+<form action="registration-form" method="GET">
+    <table>
+        <tr><td>First name</td><td><input type="text" name="firstName" required></td></tr>
+        <tr><td>Last name</td><td><input type="text" name="lastName" required></td></tr>
+        <tr>
+            <td>Date of birth</td>
+            <td>
+                <select name="day">
+                    <script>for(let i=1;i<=31;i++) document.write("<option>"+i+"</option>");</script>
+                </select>
+                <select name="month">
+                    <option>Jan</option><option>Feb</option><option>Mar</option>
+                    <option>Apr</option><option>May</option><option>Jun</option>
+                    <option>Jul</option><option>Aug</option><option>Sep</option>
+                    <option>Oct</option><option>Nov</option><option>Dec</option>
+                </select>
+                <select name="year">
+                    <script>for(let y=1980;y<=2025;y++) document.write("<option>"+y+"</option>");</script>
+                </select>
+            </td>
+        </tr>
+        <tr><td>Email</td><td><input type="email" name="email" required></td></tr>
+        <tr><td>Phone Number</td><td><input type="text" name="phoneNumber" required></td></tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Female">Female
+            </td>
+        </tr>
+        <tr><td>Address</td><td><textarea name="address" rows="3"></textarea></td></tr>
+        <tr><td>City</td><td><input type="text" name="city"></td></tr>
+        <tr><td>Pin code</td><td><input type="text" name="pin_code"></td></tr>
+        <tr><td>State</td><td><input type="text" name="state"></td></tr>
+        <tr><td>Country</td><td><input type="text" name="country" value="Vietnam"></td></tr>
+
+        <tr>
+            <td>Hobbies</td>
+            <td>
+                <input type="checkbox" name="hobbies" value="Drawing">Drawing
+                <input type="checkbox" name="hobbies" value="Singing">Singing
+                <input type="checkbox" name="hobbies" value="Dancing">Dancing
+                <input type="checkbox" name="hobbies" value="Sketching">Sketching
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <fieldset>
+                    <legend>Qualification</legend>
+                    <table border="1" cellpadding="5">
+                        <tr><th>Exam</th><th>Board</th><th>Percent</th><th>Year</th></tr>
+                        <tr>
+                            <td>X</td>
+                            <td><input type="text" name="board10"></td>
+                            <td><input type="text" name="percent10"></td>
+                            <td><input type="text" name="year10"></td>
+                        </tr>
+                        <tr>
+                            <td>XII</td>
+                            <td><input type="text" name="board12"></td>
+                            <td><input type="text" name="percent12"></td>
+                            <td><input type="text" name="year12"></td>
+                        </tr>
+                        <tr>
+                            <td>Grad</td>
+                            <td><input type="text" name="boardGrad"></td>
+                            <td><input type="text" name="percentGrad"></td>
+                            <td><input type="text" name="yearGrad"></td>
+                        </tr>
+                        <tr>
+                            <td>Masters</td>
+                            <td><input type="text" name="boardMas"></td>
+                            <td><input type="text" name="percentMas"></td>
+                            <td><input type="text" name="yearMas"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Courses</td>
+            <td>
+                <input type="checkbox" name="courses" value="BCA">BCA
+                <input type="checkbox" name="courses" value="B.Com">B.Com
+                <input type="checkbox" name="courses" value="B.Sc">B.Sc
+                <input type="checkbox" name="courses" value="B.A">B.A
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input class="btn" type="submit" value="Submit">
+                <input class="btn" type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
